@@ -1,0 +1,25 @@
+#banner{
+    width: 100%;
+}
+h2{
+    color: #735A4C;
+}
+section{
+    text-align: center;
+
+}
+#proposito{
+    background-color: #734743;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 50px;
+    border-radius: 30px 80px;
+
+}
+.table thead {
+    background-color: #735A4C !important;
+    color: white !important;
+}
