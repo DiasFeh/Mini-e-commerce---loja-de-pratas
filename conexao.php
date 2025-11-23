@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "nafer"; // coloque o nome exato do seu banco aqui
+$db   = "nafer";
 
 $conn = new mysqli($host, $user, $pass, $db);
 

@@ -166,12 +166,7 @@ include 'navbar.php'; ?>
 
 <script>
 function adicionarCarrinho(id, nome, preco, img) {
-    let escolha = confirm("Produto adicionado ao carrinho!\n\nDeseja ir para o carrinho?");
-    if (escolha) {
         window.location.href = `carrinho.php?id=${id}&nome=${encodeURIComponent(nome)}&preco=${preco}&img=${img}`;
-    } else {
-        alert("Continue comprando! 😊");
-    }
 }
 </script>
 ```
