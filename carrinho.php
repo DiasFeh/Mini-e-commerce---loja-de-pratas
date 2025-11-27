@@ -44,7 +44,7 @@ if (isset($_GET['excluir'])) {
 
     <div class="container py-5">
         <h2 class="text-center mb-4">🛒 Meu Carrinho</h2>
-
+        <!--empty verifica se o carrinho não está vazio-->
         <?php if (empty($_SESSION['carrinho'])): ?>
             <div class="alert alert-info text-center">Seu carrinho está vazio.</div>
 
@@ -63,7 +63,7 @@ if (isset($_GET['excluir'])) {
                 <tbody>
                     <?php
                     $total = 0;
-
+                    //array onde ficam guardados todos os produtos adicionados ao carrinho.
                     foreach ($_SESSION['carrinho'] as $index => $produto):
                         $total += $produto['preco'];
                     ?>

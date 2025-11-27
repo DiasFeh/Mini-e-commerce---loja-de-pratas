@@ -89,5 +89,26 @@
 </footer>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'scale(1.07)';
+            card.style.transition = '0.3s';
+            card.style.boxShadow = "0px 4px 15px rgba(0,0,0,0.3)";
+            card.style.border = "2px solid #ff66c4"; // rosa suave
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'scale(1)';
+            card.style.boxShadow = "none";
+            card.style.border = "2px solid transparent"; // some suavemente
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    
+</script>
 </html>

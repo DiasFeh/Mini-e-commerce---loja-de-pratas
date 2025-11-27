@@ -37,14 +37,14 @@ $result = $conn->query("
                     <th>Status</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody><!-- Loop que percorre cada linha retornada pela consulta SQL -->
                 <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
-                    <td><?= $row['pedido_id'] ?></td>
+                    <td><?= $row['pedido_id'] ?></td><!-- htmlspecialchars evita XSS (ATAQUE DA HACK) e falhas de segurança -->
                     <td><?= htmlspecialchars($row['cliente_nome']) ?></td>
                     <td><?= htmlspecialchars($row['cliente_telefone']) ?></td>
                     <td><?= htmlspecialchars($row['produto_nome']) ?></td>
-                    <td>R$ <?= number_format($row['preco'], 2, ',', '.') ?></td>
+                    <td>R$ <?= number_format($row['preco'], 2, ',', '.') ?></td>  <!-- Formata o preço em formato BR (R$ 0,00) -->
                     <td>
                         <?php if ($row['concluido'] == 0): ?>
                             <a href="marcar_concluido.php?id=<?= $row['pedido_id'] ?>" class="btn btn-sm btn-primary">Concluir</a>
